@@ -1,7 +1,7 @@
 # OpenALPR Xamarin
 A Open-source Xamarin integration for [OpenALPR](https://github.com/openalpr/openalpr). (Only supports Android at the moment. Anyone is welcome to port it to Xamarin.iOS) 
 
-<img alt="OpenALPR Xamarin Android Sample App" src="http://kevinjp.dk/xamarin.png" width=200 height=350 /> 
+<img alt="OpenALPR Xamarin Android Sample App 1" src="http://kevinjp.dk/xamarin.png" width=200 height=350 /><img alt="OpenALPR Xamarin Android Sample App 2" src="http://kevinjp.dk/xamarin2.png" width=200 height=350 /> 
 
 ## Introduction
 Ever wanted to use OpenALPR with Xamarin but never could? Look no further! After tons of research and testing, I've developed a solution that uses the Native JNI Libraries in combination with Android AAR libraries to create a Xamarin Library that can be used to execute OpenALPR recognition.
@@ -29,7 +29,7 @@ To use OpenALPR in your Xamarin project, here's a guide on how to do it.
     - System.Drawing.dll
     - System.Configuration.dll
 3. You also need to reference Newtonsoft.Json which you can get from NuGet
-4. Copy the folder "lib" from the Releases folder and place it (with it's libraries) in your Project Folder. Mark ALL of them as ```AndroidNativeLibrary```
+4. Copy the folder "lib" from the **Releases and Libraries** folder in the Git repository, and place it (with it's libraries) in your Project Folder. Mark ALL of them as ```AndroidNativeLibrary```
 5. Go to your **Project Properties -> Android Options** and uncheck ```Use Shared Runtime``` and set the **Linking** property to ```None```
 6. Copy the **runtime_data** folder from OpenALPR into your **Assets** folder of your Project, together with the **openalpr.conf** file.
 
