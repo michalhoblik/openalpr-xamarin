@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="License Plate"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp" />
+        <TextView
+            android:text="XXXX"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/licensePlateTextview"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:textStyle="normal" />
+        <ImageView
+            android:src="@drawable/eu3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/imageView1"
+            android:layout_marginTop="15dp" />
+        <Button
+            android:text="Recognize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recognizeButton"
+            android:layout_margin="15dp"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+</LinearLayout>

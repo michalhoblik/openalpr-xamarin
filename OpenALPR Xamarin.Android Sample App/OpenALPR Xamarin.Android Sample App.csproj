@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61209B86-F3CB-402F-9D42-9ED76B0F8C30}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenALPR_Xamarin.Android_Sample_App</RootNamespace>
+    <AssemblyName>OpenALPR Xamarin.Android Sample App</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>PdbOnly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\OpenALPR Xamarin.Android Library\bin\Release\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenALPR Xamarin.Android Binding">
+      <HintPath>..\OpenALPR Xamarin.Android Library\bin\Release\OpenALPR Xamarin.Android Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenALPR Xamarin.Android Library">
+      <HintPath>..\OpenALPR Xamarin.Android Library\bin\Release\OpenALPR Xamarin.Android Library.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\System.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\openalpr.conf" />
+    <AndroidAsset Include="Assets\runtime_data\config\au.conf" />
+    <AndroidAsset Include="Assets\runtime_data\config\auwide.conf" />
+    <AndroidAsset Include="Assets\runtime_data\config\eu.conf" />
+    <AndroidAsset Include="Assets\runtime_data\config\gb.conf" />
+    <AndroidAsset Include="Assets\runtime_data\config\kr.conf" />
+    <AndroidAsset Include="Assets\runtime_data\config\kr2.conf" />
+    <AndroidAsset Include="Assets\runtime_data\config\mx.conf" />
+    <AndroidAsset Include="Assets\runtime_data\config\sg.conf" />
+    <AndroidAsset Include="Assets\runtime_data\config\us.conf" />
+    <AndroidAsset Include="Assets\runtime_data\ocr\tessdata\lau.traineddata" />
+    <AndroidAsset Include="Assets\runtime_data\ocr\tessdata\leu.traineddata" />
+    <AndroidAsset Include="Assets\runtime_data\ocr\tessdata\lgb.traineddata" />
+    <AndroidAsset Include="Assets\runtime_data\ocr\tessdata\lkr.traineddata" />
+    <AndroidAsset Include="Assets\runtime_data\ocr\tessdata\lkr2.traineddata" />
+    <AndroidAsset Include="Assets\runtime_data\ocr\tessdata\lsg.traineddata" />
+    <AndroidAsset Include="Assets\runtime_data\ocr\tessdata\lus.traineddata" />
+    <AndroidAsset Include="Assets\runtime_data\postprocess\au.patterns" />
+    <AndroidAsset Include="Assets\runtime_data\postprocess\eu.patterns" />
+    <AndroidAsset Include="Assets\runtime_data\postprocess\gb.patterns" />
+    <AndroidAsset Include="Assets\runtime_data\postprocess\kr.patterns" />
+    <AndroidAsset Include="Assets\runtime_data\postprocess\mx.patterns" />
+    <AndroidAsset Include="Assets\runtime_data\postprocess\sg.patterns" />
+    <AndroidAsset Include="Assets\runtime_data\postprocess\us.patterns" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\cameras.yaml" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\config\au.conf" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\config\auwide.conf" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\config\eu.conf" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\config\gb.conf" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\config\kr.conf" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\config\kr2.conf" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\config\mx.conf" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\config\sg.conf" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\config\us.conf" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\ocr\tessdata\lau.traineddata" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\ocr\tessdata\leu.traineddata" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\ocr\tessdata\lgb.traineddata" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\ocr\tessdata\lkr.traineddata" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\ocr\tessdata\lkr2.traineddata" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\ocr\tessdata\lsg.traineddata" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\ocr\tessdata\lus.traineddata" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\postprocess\au.patterns" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\postprocess\eu.patterns" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\postprocess\gb.patterns" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\postprocess\kr.patterns" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\postprocess\mx.patterns" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\postprocess\sg.patterns" />
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\postprocess\us.patterns" />
+    <None Include="GettingStarted.Xamarin" />
+    <AndroidNativeLibrary Include="lib\armeabi-v7a\liblept.so" />
+    <AndroidNativeLibrary Include="lib\armeabi-v7a\libopenalpr-native.so" />
+    <AndroidNativeLibrary Include="lib\armeabi-v7a\libopencv_java.so" />
+    <AndroidNativeLibrary Include="lib\armeabi-v7a\libtess.so" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\Main.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\mipmap-hdpi\" />
+    <Folder Include="Resources\mipmap-mdpi\" />
+    <Folder Include="Resources\mipmap-xhdpi\" />
+    <Folder Include="Resources\mipmap-xxhdpi\" />
+    <Folder Include="Resources\mipmap-xxxhdpi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\eu3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\openalpr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\ak2008.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\al2002.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\ar2006.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\az1996.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\ca1993.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\co2000.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\ct2000.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\dc2003.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\de1970.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\fl2004.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\ga2007.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\hi1991.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\ia1997.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\id2006.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\il2002.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\in2009.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\ks2007b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\ky2005.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\la2006.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\ma1987.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\md2006.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\md2006b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\md2006c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\me1999.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\me1999b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\mi2007.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\mn2000.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\mo2006b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\mo2009.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\ms2003.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\mt2010.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\nc1982.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\nd1993.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\ne2005.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\nh1999.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\nj1993.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\nm2010.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\nv2001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\ny2010.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\oh2004.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\ok2009.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\or1990.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\pa2004.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\ri1996.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\sc2008.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\sd2007.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\tn2007.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\tx2009.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\ut2009.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\va2003.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\vt1985.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\wa1998.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\wi2007.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\wv1995.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\keypoints\us\wy2000.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\postprocess\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\region\au.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\region\eu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\region\kr2.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\region\us.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\ak2008.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\al2002.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\ar2006.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\az1996.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\ca1993.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\co2000.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\ct2000.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\dc2003.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\de1970.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\fl2004.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\ga2007.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\hi1991.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\ia1997.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\id2006.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\il2002.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\in2009.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\ks2007b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\ky2005.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\la2006.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\ma1987.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\md2006.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\md2006b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\md2006c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\me1999.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\me1999b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\mi2007.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\mn2000.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\mo2006b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\mo2009.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\ms2003.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\mt2010.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\nc1982.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\nd1993.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\ne2005.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\nh1999.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\nj1993.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\nm2010.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\nv2001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\ny2010.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\oh2004.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\ok2009.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\or1990.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\pa2004.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\ri1996.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\sc2008.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\sd2007.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\tn2007.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\tx2009.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\ut2009.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\va2003.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\vt1985.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\wa1998.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\wi2007.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\wv1995.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\keypoints\us\wy2000.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\postprocess\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\region\au.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\region\eu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\region\kr2.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\runtime_data\runtime_data\region\us.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\samples\eu3.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+		Other similar extension points exist, see Microsoft.Common.targets.
+		<Target Name="BeforeBuild">
+		</Target>
+		<Target Name="AfterBuild">
+		</Target>
+	-->
+</Project>
