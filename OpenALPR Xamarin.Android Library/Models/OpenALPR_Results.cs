@@ -1,15 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Newtonsoft.Json;
 
 namespace OpenALPR_Xamarin.Android_Library.Models
 {
@@ -33,15 +24,17 @@ namespace OpenALPR_Xamarin.Android_Library.Models
         {
             try
             {
-                ANPRResults results = JsonConvert.DeserializeObject<ANPRResults>(json);
+                var results = JsonConvert.DeserializeObject<ANPRResults>(json);
 
-                OpenALPR_Results parsedResults = new OpenALPR_Results();
-                parsedResults.DidErrorOccur = false;
-                parsedResults.EpochTime = results.epoch_time;
-                parsedResults.ProcessingTimeInMilliseconds = results.processing_time_ms;
-                parsedResults.FoundLicensePlates = new List<OpenALPR_Result>();
+                var parsedResults = new OpenALPR_Results
+                {
+                    DidErrorOccur = false,
+                    EpochTime = results.epoch_time,
+                    ProcessingTimeInMilliseconds = results.processing_time_ms,
+                    FoundLicensePlates = new List<OpenALPR_Result>()
+                };
 
-                foreach(ANPRResult anprResult in results.results)
+                foreach (var anprResult in results.results)
                 {
                     parsedResults.FoundLicensePlates.Add(new OpenALPR_Result(
                         anprResult.plate,
@@ -56,7 +49,8 @@ namespace OpenALPR_Xamarin.Android_Library.Models
                 }
 
                 return parsedResults;
-            } catch(Exception e)
+            }
+            catch (Exception e)
             {
                 return new OpenALPR_Results(new OpenALPR_Error("OpenALPR_Results: Couldn't Parse JSON (" + e.Message + ")", e.StackTrace));
             }

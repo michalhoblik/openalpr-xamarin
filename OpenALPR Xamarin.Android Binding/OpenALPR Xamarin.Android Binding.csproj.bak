@@ -13,7 +13,7 @@
     <AssemblyName>OpenALPR Xamarin.Android Binding</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidCodegenTarget>XamarinAndroid</AndroidCodegenTarget>
     <AndroidClassParser>class-parse</AndroidClassParser>
   </PropertyGroup>

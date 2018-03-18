@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Org.Openalpr;
-using Android.Content;
+﻿using Android.Content;
 using OpenALPR_Xamarin.Android_Library.Models;
-using Newtonsoft.Json;
+using Org.Openalpr;
+using System;
 
 namespace OpenALPR_Xamarin.Android_Library
 {
@@ -37,9 +33,10 @@ namespace OpenALPR_Xamarin.Android_Library
                 this.region = region;
 
                 _instance = OpenALPRFactory.Create(context, this.androidDataDirPath);
-            } catch(Exception error)
+            }
+            catch (Exception error)
             {
-                throw new Exception("OpenALPR: Couldn't create instance of OpenALPRFactory because of following error: " + error.Message + ", " + error.StackTrace, error.InnerException);
+                throw new Exception($"OpenALPR: Couldn't create instance of OpenALPRFactory because of following error: {error.Message}, {error.StackTrace}", error.InnerException);
             }
         }
 
@@ -47,8 +44,8 @@ namespace OpenALPR_Xamarin.Android_Library
         {
             try
             {
-                string json = _instance.RecognizeWithCountryRegionNConfig(country, region, imageFilePath, openAlprConfigFilePath, topResults);
-
+                var json = _instance.RecognizeWithCountryRegionNConfig(country, region, imageFilePath, openAlprConfigFilePath, topResults);
+               
                 try
                 {
                     OpenALPR_Results results = OpenALPR_Results.Parse(json);
@@ -62,9 +59,8 @@ namespace OpenALPR_Xamarin.Android_Library
 
             } catch(Exception error)
             {
-                return new OpenALPR_Results(new OpenALPR_Error("OpenALPR: Couldn't recognize (" + error.Message + ")", error.StackTrace));
+                return new OpenALPR_Results(new OpenALPR_Error($"OpenALPR: Couldn't recognize ({error.Message})", error.StackTrace));
             }
-        }
-        
+        }   
     }
 }
